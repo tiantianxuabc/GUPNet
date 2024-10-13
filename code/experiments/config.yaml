@@ -2,8 +2,8 @@ random_seed: 444
 
 dataset:
   type: 'kitti'
-  root_dir: '../../Dataset/3d-detection/'
-  batch_size: 32
+  root_dir: 'dataset/'
+  batch_size: 1
   class_merging: False
   use_dontcare: False
   use_3d_center: True
@@ -34,8 +34,8 @@ trainer:
   save_frequency: 10 # checkpoint save interval (in epoch)
   disp_frequency: 5 # display interval (in batch)
   log_dir: 'log'
-  #resume_model: '...'  
+  resume_model: './gup/test.pth'  
 tester:
   threshold: 0.2  # confidence filter
-  #resume_model: '...'  
+  resume_model: './gup/best_eval.pth'  
   
